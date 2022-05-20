@@ -1,0 +1,10 @@
+sv work "glbl.v"
+sv xil_defaultlib "axil_conv2D0.autotb.v"
+sv xil_defaultlib "axil_conv2D0_mac_muladd_8ns_8s_21s_21_4_1.v"
+sv xil_defaultlib "axil_conv2D0_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "axil_conv2D0.v"
+sv xil_defaultlib "axil_conv2D0_axil_conv2D0_Pipeline_loop_k1_loop_k2.v"
+sv xil_defaultlib "axil_conv2D0_BUS1_s_axi.v"
+sv xil_defaultlib "AESL_axi_slave_BUS1.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

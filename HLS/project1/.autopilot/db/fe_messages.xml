@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:732:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=axil_conv2D0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=img_in bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=img_out bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=weights bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=bias bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D0" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="HLS_base_image_conv/axil_conv2D0.cpp:36:13" msg_body="Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint&lt;8&gt;s' into 'axil_conv2D0(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_int&lt;8&gt;*, ap_int&lt;32&gt;)'">
+        <args Callee="_llvm.fpga.pack.none.i8.s_struct.ap_uint&lt;8&gt;s" Caller="axil_conv2D0(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_int&lt;8&gt;*, ap_int&lt;32&gt;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

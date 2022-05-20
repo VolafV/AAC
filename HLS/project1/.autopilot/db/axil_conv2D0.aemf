@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652720108637">
+  <ports id="1" name="img_in" type="PortType" coreName="RAM_1P" coreId="3621216858" bitwidth="8" iftype="IfTypeRegister" arraysize="4096">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="img_out" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="3600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="weights" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="8" iftype="IfTypeRegister" arraysize="25">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="bias" type="PortType" originalName="bias.V" coreId="54" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="84" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="101" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="105" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="108" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="109" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="110" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="111" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="114" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="117" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="120" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="121" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="124" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="126" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="127" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="131" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="134" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="136" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="137" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="138" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="139" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="140" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="141" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="142" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="143" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="144" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="148" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="149" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="150" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="151" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="156" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="161" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="166" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="168" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="169" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="174" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="175" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="176" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="177" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="178" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="179" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="180" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="181" source_obj="//@blocks.2/@node_objs.19" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="182" source_obj="//@blocks.2/@node_objs.20" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="183" source_obj="//@blocks.2/@node_objs.22" sink_obj="//@ports.1"/>
+  <edges id="186" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="187" source_obj="//@blocks.2/@node_objs.18" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="188" source_obj="//@blocks.2/@node_objs.22" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="189" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="191" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="193" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="195" source_obj="//@blocks.2/@node_objs.24" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="196" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.28"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="407" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="408" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="409" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="410" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="411" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="412" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="413" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="414" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="415" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="416" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="417" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="418" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="419" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.25"/>
+  <blocks id="32" name="block_32" type="BlockType">
+    <controlOutputObjs>block_42</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="rhs" originalName="rhs" coreId="828326990" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="orow_V" originalName="orow.V" coreId="192" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="indvar_flatten7" coreId="2084577200" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="bias_read" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="114" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>bias</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="acc_V_2_loc" coreId="80" bitwidth="21" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="acc_V" originalName="acc.V" rtlName="acc_V_fu_141_p1" coreId="0" bitwidth="21" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="indvar_flatten7_write_ln23" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="0" contextFuncName="axil_conv2D0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="orow_V_write_ln23" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="0" contextFuncName="axil_conv2D0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="rhs_write_ln23" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="0" contextFuncName="axil_conv2D0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln23" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="0" contextFuncName="axil_conv2D0" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <controlInputObjs>block_42</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HLS_base_image_conv/axil_conv2D0.cpp">
+      <validLinenumbers>23</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="42" name="block_42" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlInputObjs>.split6</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_77</controlOutputObjs>
+    <controlOutputObjs>.split6</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="orow_V_1" lineNumber="885" originalName="orow.V" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="0" contextFuncName="operator_add_assign_1_false" bitwidth="6" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="indvar_flatten7_load" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="2084601752" contextFuncName="operator_lt_32_true" bitwidth="12" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="p_shl" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl_fu_166_p3" coreId="1330007552" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="p_shl1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl1_fu_174_p3" coreId="2084692016" contextFuncName="operator_add_assign_1_false" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="p_shl1_cast" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl1_cast_fu_182_p1" coreId="1313423963" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="lhs" lineNumber="885" originalName="lhs" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="lhs_fu_186_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="1.54" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln1072_1" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1072_1_fu_192_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.99" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln1072_fu_198_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_lt_32_true" bitwidth="12" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.54" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="2084589248" contextFuncName="operator_lt_32_true" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split6</controlInputObjs>
+      <controlInputObjs>block_77</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>885</validLinenumbers>
+      <validLinenumbers>1072</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="75" name=".split6" type="BlockType">
+    <controlInputObjs>block_42</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_42</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="rhs_load" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1953391988" contextFuncName="operator_lt_32_true" bitwidth="6" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1072_fu_207_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.42" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="select_ln23" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." rtlName="select_ln23_fu_213_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="axil_conv2D0" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_delay="1.18" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="add_ln885" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln885_fu_222_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="p_shl_mid1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl_mid1_fu_228_p3" coreId="2084575696" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="p_shl1_mid1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl1_mid1_fu_236_p3" coreId="1885414944" contextFuncName="operator_add_assign_1_false" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="p_shl1_cast_mid1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_shl1_cast_mid1_fu_244_p1" coreId="1634882592" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="lhs_mid1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="lhs_mid1_fu_248_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="12" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="1.54" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="select_ln23_1" lineNumber="23" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." rtlName="select_ln23_1_fu_254_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="axil_conv2D0" bitwidth="12" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="23" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln1072_fu_262_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_lt_32_true" bitwidth="6" opcode="select" nodeLabel="1.0" m_display="0" m_delay="1.18" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="grp_axil_conv2D0_Pipeline_loop_k1_loop_k2_fu_129" coreId="1414419794" contextFuncName="operator_lt_32_true" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.58" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>weights</dataInputObjs>
+      <dataInputObjs>img_in</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>axil_conv2D0_Pipeline_loop_k1_loop_k2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="acc_V_2_loc_load" coreId="573386029" bitwidth="21" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp" lineNumber="1080" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_fu_305_p4" coreId="0" contextFuncName="operator_gt_32_true" bitwidth="13" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1080" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="icmp_ln1080" lineNumber="1080" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1080_fu_315_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_gt_32_true" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.09" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1080" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_1" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_1_fu_321_p3" coreId="0" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln229" lineNumber="229" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="trunc_ln229_fu_329_p1" coreId="2084645456" contextFuncName="ap_uint_21_s" bitwidth="8" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" linenumber="229" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="ap_uint&amp;lt;21&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="select_ln1080" lineNumber="1080" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln1080_fu_333_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_gt_32_true" bitwidth="8" opcode="select" nodeLabel="3.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1080" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="or_ln1080" lineNumber="1080" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="or_ln1080_fu_341_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_gt_32_true" bitwidth="1" opcode="or" nodeLabel="3.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1080" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="acc_sat" lineNumber="1080" originalName="acc_sat" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="img_out_d0" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_gt_32_true" bitwidth="8" opcode="select" nodeLabel="3.0" m_display="0" m_delay="1.24" m_topoIndex="45" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1080" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="zext_ln1540" lineNumber="1540" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln1540_fu_271_p1" coreId="2084589248" contextFuncName="operator_add_45_true_13_true" bitwidth="12" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1540" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+&amp;lt;45, true, 13, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="ret" lineNumber="1540" originalName="ret" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="ret_fu_275_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_45_true_13_true" bitwidth="12" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.54" m_topoIndex="32" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1540" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+&amp;lt;45, true, 13, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="zext_ln587" lineNumber="587" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln587_fu_356_p1" coreId="0" contextFuncName="operator_long_long" bitwidth="64" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="587" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator long long"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="img_out_addr" lineNumber="38" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="0" contextFuncName="axil_conv2D0" bitwidth="12" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="38" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>img_out</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="img_out_addr_write_ln38" lineNumber="38" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="axil_conv2D0" opcode="store" nodeLabel="3.0" m_display="0" m_delay="3.25" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="38" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="add_ln885_1" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln885_1_fu_281_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="indvar_flatten7_write_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="0" contextFuncName="operator_lt_32_true" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="orow_V_write_ln1072" lineNumber="1072" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="2084659336" contextFuncName="operator_lt_32_true" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1072" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="rhs_write_ln885" lineNumber="885" fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="0" contextFuncName="operator_add_assign_1_false" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="885" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln0" coreId="2084625600" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_42</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="HLS_base_image_conv/axil_conv2D0.cpp">
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h">
+      <validLinenumbers>229</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/archangel/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>1072</validLinenumbers>
+      <validLinenumbers>885</validLinenumbers>
+      <validLinenumbers>1080</validLinenumbers>
+      <validLinenumbers>1540</validLinenumbers>
+      <validLinenumbers>587</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="77" name="block_77" type="BlockType">
+    <controlInputObjs>block_42</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln41" lineNumber="41" fileName="HLS_base_image_conv/axil_conv2D0.cpp" fileDirectory=".." coreId="1869833586" contextFuncName="axil_conv2D0" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="HLS_base_image_conv/axil_conv2D0.cpp" linenumber="41" fileDirectory="/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1" functionName="axil_conv2D0"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="HLS_base_image_conv/axil_conv2D0.cpp">
+      <validLinenumbers>41</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="indvar_flatten7_reg_374">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="orow_V_reg_367">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="rhs_reg_360">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln23_reg_395">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1072_reg_400">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_V_2_loc_reg_381">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_reg_405">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_V_reg_387">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <expressionNodes realName="p_shl1_mid1_fu_236">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_fu_166">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln229_fu_329">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln23_1_fu_254">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_V_fu_141">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl1_cast_mid1_fu_244">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln23_fu_213">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lhs_fu_186">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_V_2_loc_fu_106">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1072_fu_262">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1080_fu_333">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln885_fu_222">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rhs_fu_94">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1072_1_fu_192">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_321">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln885_1_fu_281">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_sat_fu_347">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_fu_275">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1080_fu_315">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln1072_fu_198">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="orow_V_fu_98">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl1_fu_174">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1072_fu_207">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_out_addr_gep_fu_116">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1540_fu_271">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lhs_mid1_fu_248">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten7_fu_102">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl1_cast_fu_182">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_mid1_fu_228">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_305">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln587_fu_356">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln1080_fu_341">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_axil_conv2D0_Pipeline_loop_k1_loop_k2_fu_129">
+    <nodeIds>56</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="orow_V_1_load_fu_160">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten7_load_load_fu_163">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln1072_store_fu_287">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="rhs_load_load_fu_204">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_150">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="acc_V_2_loc_load_load_fu_302">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_155">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln885_store_fu_297">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln1072_store_fu_292">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="bias_read_read_fu_110">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_145">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="img_out">
+    <nodeIds>69</nodeIds>
+  </memoryPorts>
+  <ioPorts name="bias">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_out(p0)">
+    <contents name="store">
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="56" stage="2" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="56" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="axil_conv2D0" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="122401" mMaxLatency="122401">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>32</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="loop_orow_loop_ocol" mII="-1" mDepth="-1" mMinTripCount="3600" mMaxTripCount="3600" mMinLatency="122400" mMaxLatency="122400" mType="1">
+      <basicBlocks>42</basicBlocks>
+      <basicBlocks>75</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>77</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

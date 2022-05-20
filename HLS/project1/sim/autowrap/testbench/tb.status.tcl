@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/./sim/autowrap/testbench/axil_conv2D0.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="axil_conv2D0" xd:componentRef="axil_conv2D0" xd:initiationInterval="122402" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_BUS1" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(img_in)" xd:originalName="img_in" xd:direction="in" xd:interfaceRef="s_axi_BUS1" xd:busTypeRef="axilite" xd:offset="0x1000" xd:dataWidth="4096"/>
+  <xd:arg xd:name="*(img_out)" xd:originalName="img_out" xd:direction="out" xd:interfaceRef="s_axi_BUS1" xd:busTypeRef="axilite" xd:offset="0x2000" xd:dataWidth="4096"/>
+  <xd:arg xd:name="*(weights)" xd:originalName="weights" xd:direction="in" xd:interfaceRef="s_axi_BUS1" xd:busTypeRef="axilite" xd:offset="0x20" xd:dataWidth="32"/>
+  <xd:arg xd:name="bias" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_BUS1" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="122401" xd:worst-case="122401" xd:average-case="122401"/>
+  <xd:resourceEstimates xd:LUT="750" xd:FF="509" xd:BRAM="0" xd:DSP="1"/>
+</xd:acceleratorMap>

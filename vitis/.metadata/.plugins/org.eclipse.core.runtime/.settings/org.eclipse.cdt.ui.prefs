@@ -1,0 +1,24 @@
+eclipse.preferences.version=1
+formatSourceCode=true
+formatter_profile=org.eclipse.cdt.ui.default.kandr_profile
+formatter_settings_version=1
+hoverModifierMasks=org.eclipse.cdt.ui.BestMatchHover;0;org.eclipse.cdt.debug.internal.ui.editors.DebugTextHover;0;org.eclipse.cdt.ui.ProblemHover;0;org.eclipse.cdt.ui.CDocHover;0;org.eclipse.cdt.ui.CMacroExpansionHover;0;org.eclipse.cdt.ui.CSourceHover;131072;org.eclipse.cdt.ui.AnnotationHover;0;
+hoverModifiers=org.eclipse.cdt.ui.BestMatchHover;0;org.eclipse.cdt.debug.internal.ui.editors.DebugTextHover;\!0;org.eclipse.cdt.ui.ProblemHover;\!0;org.eclipse.cdt.ui.CDocHover;\!0;org.eclipse.cdt.ui.CMacroExpansionHover;\!0;org.eclipse.cdt.ui.CSourceHover;Shift;org.eclipse.cdt.ui.AnnotationHover;\!0;
+inactiveCodeColor=85,87,83
+includeStyle.external=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="false" keep_together\="false" relative_path\="false"/>
+includeStyle.inOtherProject=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="false" keep_together\="false" relative_path\="false"/>
+includeStyle.inSameProject=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="false" keep_together\="false" relative_path\="false"/>
+includeStyle.other=<?xml version\="1.0" encoding\="UTF-8"?>\n<style blank_line_before\="true" keep_together\="true" order\="3"/>
+includeStyle.partner=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="true" keep_together\="true" order\="0" relative_path\="false"/>
+includeStyle.related=<?xml version\="1.0" encoding\="UTF-8"?>\n<style blank_line_before\="false" keep_together\="false"/>
+includeStyle.sameFolder=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="false" keep_together\="false" relative_path\="false"/>
+includeStyle.subfolder=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="false" blank_line_before\="false" keep_together\="false" relative_path\="false"/>
+includeStyle.system=<?xml version\="1.0" encoding\="UTF-8"?>\n<style blank_line_before\="true" keep_together\="true" order\="1"/>
+includeStyle.systemWithExtension=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="true" blank_line_before\="false" keep_together\="true" order\="1" relative_path\="false"/>
+includeStyle.systemWithoutExtension=<?xml version\="1.0" encoding\="UTF-8"?>\n<style angle_brackets\="true" blank_line_before\="false" keep_together\="true" order\="2" relative_path\="false"/>
+matchingBracketsColor=233,185,110
+org.eclipse.cdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+removeTrailingWhitespaceEditedLines=false
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

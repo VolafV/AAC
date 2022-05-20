@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="HLS" solutionName="project1" date="2022-05-16T17:55:07.291+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'loop_ocol' (HLS_base_image_conv/axil_conv2D0.cpp:25:12) in function 'axil_conv2D0' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html" projectName="HLS" solutionName="project1" date="2022-05-16T17:55:05.349+0100" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 1048. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().&#xA;Compiling module xil_defaultlib.nodf_module_intf&#xA;Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=4)&#xA;Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)&#xA;Compiling module xil_defaultlib.dataflow_monitor_1&#xA;Compiling module xil_defaultlib.apatb_axil_conv2D0_top&#xA;Compiling module work.glbl&#xA;Built simulation snapshot axil_conv2D0&#xA;&#xA;&#xA;****** xsim v2021.2 (64-bit)&#xA;  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021&#xA;  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021&#xA;    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.&#xA;&#xA;&#xA;source xsim.dir/axil_conv2D0/xsim_script.tcl&#xA;# xsim {axil_conv2D0} -autoloadwcfg -tclbatch {axil_conv2D0.tcl}&#xA;Time resolution is 1 ps&#xA;source axil_conv2D0.tcl&#xA;## run all&#xA;////////////////////////////////////////////////////////////////////////////////////&#xA;// Inter-Transaction Progress: Completed Transaction / Total Transaction&#xA;// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%&#xA;//&#xA;// RTL Simulation : &quot;Inter-Transaction Progress&quot; [&quot;Intra-Transaction Progress&quot;] @ &quot;Simulation Time&quot;&#xA;////////////////////////////////////////////////////////////////////////////////////&#xA;// RTL Simulation : 0 / 1 [0.00%] @ &quot;125000&quot;&#xA;// RTL Simulation : 1 / 1 [100.00%] @ &quot;1450185000&quot;&#xA;////////////////////////////////////////////////////////////////////////////////////&#xA;$finish called at time : 1450245 ns : File &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/axil_conv2D0.autotb.v&quot; Line 290&#xA;run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2681.348 ; gain = 0.000 ; free physical = 974 ; free virtual = 6109&#xA;## quit" projectName="HLS" solutionName="project1" date="2022-05-16T17:57:29.756+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 1007. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread()." projectName="HLS" solutionName="project1" date="2022-05-16T17:56:32.447+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 998. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread()." projectName="HLS" solutionName="project1" date="2022-05-16T17:56:32.339+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 800. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread()." projectName="HLS" solutionName="project1" date="2022-05-16T17:56:32.266+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 759. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread()." projectName="HLS" solutionName="project1" date="2022-05-16T17:56:32.181+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3373] &quot;/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/HLS/project1/sim/verilog/AESL_axi_slave_BUS1.v&quot; Line 750. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread()." projectName="HLS" solutionName="project1" date="2022-05-16T17:56:32.122+0100" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="HLS" solutionName="project1" date="2022-05-16T17:56:30.567+0100" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

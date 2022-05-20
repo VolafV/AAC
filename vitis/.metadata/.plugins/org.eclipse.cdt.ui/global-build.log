@@ -1,0 +1,99 @@
+Nothing to build in platform 'design_1_wrapper'
+
+15:37:19 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/image_conv2D.cpp
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/image_conv2D.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/image_conv2D.d" -MT"src/image_conv2D.o" -o "src/image_conv2D.o" "../src/image_conv2D.cpp"
+Finished building: ../src/image_conv2D.cpp
+ 
+Building target: project1.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "project1.elf"  ./src/image_conv2D.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: project1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59823	   2580	  22648	  85051	  14c3b	project1.elf
+Finished building: project1.elf.size
+ 
+00:04:21 **** Clean-only build of project design_1_wrapper ****
+buildplatform.sh 37535 design_1_wrapper clean 
+XSDB Server Channel: tcfchan#1
+Reading the platform  : "design_1_wrapper"
+Cleaning the zynq_fsbl application.
+rm -rf  pcap.o  ps7_init.o  nand.o  main.o  qspi.o  nor.o  rsa.o  md5.o  image_mover.o  fsbl_hooks.o  sd.o  fsbl_handoff.o  zyn
+q_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
+
+Cleaning the zynq_fsbl application, bsp
+make -C ps7_cortexa9_0/libsrc/axil_conv2D0_v1_0/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+Cleaning the BSP for domain  - standalone_ps7_cortexa9_0
+make -C ps7_cortexa9_0/libsrc/axil_conv2D0_v1_0/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+00:04:43 **** Clean-only build of configuration Debug for project project1 ****
+make clean 
+rm -rf  ./src/image_conv2D.o  ./src/image_conv2D.d  project1.elf.size  project1.elf
+ 
+00:04:45 **** Clean-only build of configuration Debug for project project1_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
