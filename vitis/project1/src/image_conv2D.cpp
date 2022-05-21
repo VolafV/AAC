@@ -162,46 +162,35 @@ void HWSW_conv2D(unsigned char *img_in, unsigned char *img_out) {
 // include declarations
 void HWSW_conv2D(unsigned char *img_in, unsigned char *img_out) {
 	//TODO interact with the hardware
+	XAxil_conv2d0_Config* config = XAxil_conv2d0_LookupConfig(
+			XPAR_AXIL_CONV2D0_0_DEVICE_ID);
+	XAxil_conv2d0 bus = { 0 };
+	XAxil_conv2d0_CfgInitialize(&bus, config);
+
 	//transfer the img_in
-	printf("first : %d  \n", 1);
 	printf("Transfering img_in\n");
-	for (int i = 0; i < IWIDTH * IHEIGHT; i += sizeof(uint)) {
-		XAxil_conv2d0_WriteReg(XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-				XAXIL_CONV2D0_BUS1_ADDR_IMG_IN_BASE + i, *(uint* )(img_in + i));
-	}
+	XAxil_conv2d0_Write_img_in_Bytes(&bus, 0, (char*) img_in, IWIDTH * IHEIGHT);
+
 	//transfer weights
 	printf("Transfering weights\n");
-	signed char *weights = kernel;
-	for (int i = 0; i < K_SIZE * K_SIZE; i += sizeof(uint)) {
-		XAxil_conv2d0_WriteReg(XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-				XAXIL_CONV2D0_BUS1_ADDR_WEIGHTS_BASE + i,
-				*(uint* )(weights + i));
-	}
+	XAxil_conv2d0_Write_weights_Bytes(&bus, 0, (char*) kernel, K_SIZE * K_SIZE);
+
 	//transfer bias
 	printf("Transfering bias\n");
-	XAxil_conv2d0_WriteReg(XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-			XAXIL_CONV2D0_BUS1_ADDR_BIAS_DATA,
-			bias);
+	XAxil_conv2d0_Set_bias(&bus, bias);
+
 	//run
 	printf("Starting\n");
-	XAxil_conv2d0_WriteReg(XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-			XAXIL_CONV2D0_BUS1_ADDR_AP_CTRL, 0x1);
+	XAxil_conv2d0_Start(&bus);
 
 	//wait till done
 	printf("Waiting till done\n");
-	int flags = 0;
 	do {
-		flags = XAxil_conv2d0_ReadReg(
-				XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-				XAXIL_CONV2D0_BUS1_ADDR_AP_CTRL);
-	} while ((flags & 2) != 2);
+	} while (XAxil_conv2d0_IsDone(&bus) != 1);
 	//get output
 	printf("Getting output\n");
-	for (int i = 0; i < OWIDTH * OHEIGHT; i += sizeof(uint)) {
-		*(unsigned int*) (img_out + i) = XAxil_conv2d0_ReadReg(
-				XPAR_AXIL_CONV2D0_0_S_AXI_BUS1_BASEADDR,
-				XAXIL_CONV2D0_BUS1_ADDR_IMG_OUT_BASE + i);
-	}
+	XAxil_conv2d0_Read_img_out_Bytes(&bus, 0, (char*) img_out,
+			OWIDTH * OHEIGHT);
 }
 
 #endif
@@ -213,7 +202,9 @@ int check_hw_errors()
 	for (int i=0; i < (OHEIGHT*OWIDTH*3); i++) {
 		if (hw_img_out[i] != image_out[i]) {
 			err_cnt++;
+#if SIMPLE_ERROR == 0
 			printf("%d: %d != %d\n", i, hw_img_out[i], image_out[i]);
+#endif
 		}
 	}
 	return err_cnt;

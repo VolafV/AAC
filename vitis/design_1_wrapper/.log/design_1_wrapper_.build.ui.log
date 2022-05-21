@@ -1,7 +1,6 @@
-2022-05-21T00:04:21.55847900255-00:04:21 **** Clean-only build of project design_1_wrapper ****
-000-buildplatform.sh 37535 design_1_wrapper clean 
-000-XSDB Server Channel: tcfchan#1
-000-Reading the platform  : "design_1_wrapper"
+2022-05-21T16:01:08.85173400255-16:01:08 **** Clean-only build of project design_1_wrapper ****
+000-buildplatform.sh 39993 design_1_wrapper clean 
+000-XSDB Server Channel: tcfchan#19
 000-Cleaning the zynq_fsbl application.
 000-rm -rf  pcap.o  ps7_init.o  nand.o  main.o  qspi.o  nor.o  rsa.o  md5.o  image_mover.o  fsbl_hooks.o  sd.o  fsbl_handoff.o  zyn
 000-q_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -65,5 +64,5 @@
 000-rm -f ps7_cortexa9_0/lib/libxil.a
 000-
 00255-
-00:04:41 Build Finished (took 19s.696ms)
+16:01:24 Build Finished (took 15s.613ms)
 

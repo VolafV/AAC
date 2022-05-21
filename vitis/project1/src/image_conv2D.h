@@ -1,5 +1,6 @@
 #define EMBEDDED 1
 #define HW_IP 1
+#define SIMPLE_ERROR 1
 
 #define PRINT_IMAGE_IN 0
 #define PRINT_IMAGE_OUT 0

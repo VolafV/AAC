@@ -25,5 +25,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow /home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/vitis/project1/Debug/project1.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

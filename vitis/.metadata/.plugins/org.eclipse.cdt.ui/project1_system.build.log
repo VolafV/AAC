@@ -1,8 +1,8 @@
-00:04:45 **** Clean-only build of configuration Debug for project project1_system ****
+16:01:25 **** Clean-only build of configuration Debug for project project1_system ****
 make clean 
 rm -rf ./_sds
 rm -rf package
 rm -f system.bif
 
-00:04:45 Build Finished (took 643ms)
+16:01:25 Build Finished (took 576ms)
 

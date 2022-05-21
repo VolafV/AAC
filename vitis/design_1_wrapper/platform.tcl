@@ -24,3 +24,7 @@ platform active {design_1_wrapper}
 platform config -updatehw {/home/archangel/Desktop/work/MEIC/S2/AAC/Projeto1/vivado/design_1_wrapper.xsa}
 platform generate
 platform clean
+platform generate
+platform clean
+platform generate
+platform clean
